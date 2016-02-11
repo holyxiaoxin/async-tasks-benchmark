@@ -1,7 +1,7 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: EATBenchmark, an Elixir Project
+tag_text: Elixir Async Tasks Benchmark
+description: Elixir Async Tasks Benchmark explores the execution time between synchronous and asynchronous jobs.
 
 # Build settings
 markdown: kramdown
