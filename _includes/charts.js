@@ -39,35 +39,70 @@ Chart.types.Line.extend({
 
   }
 });
-var ctx = document.getElementById("my-chart").getContext("2d");
-var options = {
+var ctx1 = document.getElementById("my-chart-1").getContext("2d");
+var options1 = {
   scaleShowGridLines : true,
   scaleLabel: "          <%=value%>"
 };
-var data = {
+var data1 = {
   labels: ["0", "10", "20", "30", "40", "50", "60"],
   datasets: [
     {
-      label: "Loop: 10",
+      label: "Synchronous",
       fillColor: "rgba(220,220,220,0.2)",
       strokeColor: "rgba(220,220,220,1)",
       pointColor: "rgba(220,220,220,1)",
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
-      data: [0, 59, 80, 81, 56, 55, 40]
+
+      data: [0, 0.2616, 0.4902, 0.7677 ,1.0067 ,1.1891 ,1.5043]
     },
     {
-      label: "Loop: 50",
+      label: "ASynchronous",
       fillColor: "rgba(151,187,205,0.2)",
       strokeColor: "rgba(151,187,205,1)",
       pointColor: "rgba(151,187,205,1)",
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [0, 48, 40, 19, 86, 27, 90]
+      data: [0, 0.1607, 0.2871, 0.3837, 0.3789, 0.5282, 0.7007]
     }
   ]
 };
-var myLineChart = new Chart(ctx).LineAlt(data, options);
-document.getElementById('js-legend').innerHTML = myLineChart.generateLegend();
+var myLineChart1 = new Chart(ctx1).LineAlt(data1, options1);
+document.getElementById('js-legend-1').innerHTML = myLineChart1.generateLegend();
+
+var ctx2 = document.getElementById("my-chart-2").getContext("2d");
+var options2 = {
+  scaleShowGridLines : true,
+  scaleLabel: "          <%=value%>"
+};
+var data2 = {
+  labels: ["0", "10", "20", "30", "40", "50", "60"],
+  datasets: [
+    {
+      label: "Synchronous",
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+
+      data: [0, 0.2621, 0.5022, 0.7811, 0.9865, 1.2541, 1.5734]
+    },
+    {
+      label: "ASynchronous",
+      fillColor: "rgba(151,187,205,0.2)",
+      strokeColor: "rgba(151,187,205,1)",
+      pointColor: "rgba(151,187,205,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(151,187,205,1)",
+      data: [0, 0.1331, 0.2118, 0.3389, 0.3772, 0.5468, 0.5839]
+    }
+  ]
+};
+var myLineChart2 = new Chart(ctx2).LineAlt(data2, options2);
+document.getElementById('js-legend-2').innerHTML = myLineChart2.generateLegend();
