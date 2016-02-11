@@ -2,6 +2,7 @@
 title: EATBenchmark, an Elixir Project
 tag_text: Elixir Async Tasks Benchmark
 description: Elixir Async Tasks Benchmark explores the execution time between synchronous and asynchronous jobs.
+image_base_url: https://raw.githubusercontent.com/holyxiaoxin/async-tasks-benchmark/gh-pages/
 
 # Build settings
 markdown: kramdown
