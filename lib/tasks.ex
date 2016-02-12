@@ -1,9 +1,13 @@
 defmodule Tasks do
-  use Application
 
   def main(args) do
     args |> parse_args |> setup
     |> process_requests |> print_results
+  end
+
+  def run_benchmark(args) do
+    args |> setup
+    |> process_requests
   end
 
   defp parse_args(args) do
@@ -60,7 +64,7 @@ defmodule Tasks do
     end
     check_status_code(:sync, has_status_200)
     each_sync_micros = total_sync_micros/loop_num
-    "sync took an avg #{Float.round(each_sync_micros/1000000, 4)} seconds"
+    Float.round(each_sync_micros/1000000, 4)
   end
 
   defp process_async_requests(urls, loop_num) do
@@ -82,7 +86,7 @@ defmodule Tasks do
     end
     check_status_code(:async ,has_status_200)
     each_async_micros = total_async_micros/loop_num
-    "async took an avg #{Float.round(each_async_micros/1000000, 4)} seconds"
+    Float.round(each_async_micros/1000000, 4)
   end
 
   defp check_status_code(type, false) do
@@ -90,9 +94,9 @@ defmodule Tasks do
   end
   defp check_status_code(_, true) do end
 
-  defp print_results({sync_print, async_print}) do
-    IO.puts sync_print
-    IO.puts async_print
+  defp print_results({sync_result, async_result}) do
+    IO.puts "sync took an avg #{sync_result} seconds"
+    IO.puts "async took an avg #{async_result} seconds"
   end
 
 end

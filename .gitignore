@@ -5,4 +5,4 @@ erl_crash.dump
 *.ez
 /_site
 /.sass-cache
-benchmark.result
+/benchmark_results
