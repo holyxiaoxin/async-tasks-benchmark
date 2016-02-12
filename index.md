@@ -9,7 +9,7 @@ EATBenchmark explores the execution time between **synchronous** and **asynchron
 
 ---
 
-I needed a way to handle multiple http requests while not doing so in a blocking manner.
+I needed a way to handle multiple HTTP requests while not doing so in a blocking manner.
 Initially, I was checking out how processes work and was having some fun spawning a ton of them while staring at Erlang's observe GUI.
 Then I went on to take a look at how [Elixir Task](http://elixir-lang.org/docs/v1.1/elixir/Task.html) would help me in achieving similar results in an abstracted manner.
 
@@ -21,7 +21,7 @@ urls
   |> Enum.map(&Task.await(&1, 30000))
 ~~~
 
-We start a task for each of the http requests and then wait on it.
+We start a task for each of the HTTP requests and then wait on it.
 
 Quoting from Michał Muskała's [post](http://michal.muskala.eu/2015/08/06/parallel-downloads-in-elixir.html):
 
@@ -40,7 +40,7 @@ urls
 
 Borrowing Erlang's timer module `:timer.tc fn -> end`, we could easily get how long each batch of requests took.
 
-The results at this point of time revealed that both code took around the same time to execute, even for a large amount of http requests.
+The results at this point of time revealed that both code took around the same time to execute, even for a large amount of HTTP requests.
 This is due to Hackney's default connection pool of 50. We could easily increase it by defining the pool to a much larger size
 
 ~~~ elixir
