@@ -3,6 +3,6 @@
 /deps
 erl_crash.dump
 *.ez
-/._site
+/_site
 /.sass-cache
 benchmark.result
