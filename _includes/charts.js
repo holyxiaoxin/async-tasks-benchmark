@@ -1,4 +1,7 @@
 Chart.defaults.global.responsive = true;
+Chart.defaults.global.animationEasing = "easeOutQuart";
+Chart.defaults.global.dynamicDisplay = true;
+Chart.defaults.global.animationSteps = 120;
 Chart.types.Line.extend({
   name: "LineAlt",
   initialize: function() {
@@ -70,8 +73,6 @@ var data1 = {
     }
   ]
 };
-var myLineChart1 = new Chart(ctx1).LineAlt(data1, options1);
-document.getElementById('js-legend-1').innerHTML = myLineChart1.generateLegend();
 
 var ctx2 = document.getElementById("my-chart-2").getContext("2d");
 var options2 = {
@@ -104,5 +105,18 @@ var data2 = {
     }
   ]
 };
-var myLineChart2 = new Chart(ctx2).LineAlt(data2, options2);
-document.getElementById('js-legend-2').innerHTML = myLineChart2.generateLegend();
+
+
+// Animate chart when height is reached
+var chartHeight = $('#my-chart-1').offset().top - $(window).height();
+var isChartLoaded = false;
+
+$(window).on('scroll', function() {
+  if ($(window).scrollTop() > chartHeight && !isChartLoaded) {
+    var myLineChart1 = new Chart(ctx1).LineAlt(data1, options1);
+    document.getElementById('js-legend-1').innerHTML = myLineChart1.generateLegend();
+    var myLineChart2 = new Chart(ctx2).LineAlt(data2, options2);
+    document.getElementById('js-legend-2').innerHTML = myLineChart2.generateLegend();
+    isChartLoaded = true;
+  }
+});
