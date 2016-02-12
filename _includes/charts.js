@@ -36,7 +36,7 @@ Chart.types.Line.extend({
     ctx.translate(x, y);
     ctx.rotate(-90 * Math.PI / 180);
     // y axis label
-    ctx.fillText("Average Time Taken", 0, 0);
+    ctx.fillText("Average Time Taken (s)", 0, 0);
     ctx.restore();
 
 
@@ -48,7 +48,7 @@ var options1 = {
   scaleLabel: "          <%=value%>"
 };
 var data1 = {
-  labels: ["0", "10", "20", "30", "40", "50", "60"],
+  labels: ["0", "50", "100", "150", "200", "250", "300"],
   datasets: [
     {
       label: "Synchronous",
@@ -59,7 +59,7 @@ var data1 = {
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
 
-      data: [0, 0.2616, 0.4902, 0.7677 ,1.0067 ,1.1891 ,1.5043]
+      data: [0, 1.219, 1.7474, 3.5988, 4.5904, 6.0892, 7.1681]
     },
     {
       label: "ASynchronous",
@@ -69,7 +69,7 @@ var data1 = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [0, 0.1607, 0.2871, 0.3837, 0.3789, 0.5282, 0.7007]
+      data: [0, 1.4351, 0.7572, 1.9704, 1.712, 2.1505, 2.6874]
     }
   ]
 };
@@ -80,7 +80,7 @@ var options2 = {
   scaleLabel: "          <%=value%>"
 };
 var data2 = {
-  labels: ["0", "10", "20", "30", "40", "50", "60"],
+  labels: ["0", "50", "100", "150", "200", "250", "300"],
   datasets: [
     {
       label: "Synchronous",
@@ -91,7 +91,7 @@ var data2 = {
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
 
-      data: [0, 0.2621, 0.5022, 0.7811, 0.9865, 1.2541, 1.5734]
+      data: [0, 1.1916, 2.5259, 3.6541, 4.8827, 6.1095, 6.4936]
     },
     {
       label: "ASynchronous",
@@ -101,7 +101,7 @@ var data2 = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [0, 0.1331, 0.2118, 0.3389, 0.3772, 0.5468, 0.5839]
+      data: [0, 0.4528, 0.8413, 1.3215, 1.8274, 2.0914, 2.3564]
     }
   ]
 };
@@ -112,7 +112,7 @@ var options3 = {
   scaleLabel: "          <%=value%>"
 };
 var data3 = {
-  labels: ["0", "10", "20", "30", "40", "50", "60"],
+  labels: ["0", "50", "100", "150", "200", "250", "300"],
   datasets: [
     {
       label: "Synchronous",
@@ -123,7 +123,7 @@ var data3 = {
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
 
-      data: [0, 0.2621, 0.5022, 0.7811, 0.9865, 1.2541, 1.5734]
+      data: [0, 1.1788, 2.4164, 3.822, 5.0605, 6.3205, 7.6368]
     },
     {
       label: "ASynchronous",
@@ -133,7 +133,7 @@ var data3 = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(151,187,205,1)",
-      data: [0, 0.1331, 0.2118, 0.3389, 0.3772, 0.5468, 0.5839]
+      data: [0, 0.4281, 0.8399, 1.2484, 1.608, 1.9235, 2.5216]
     }
   ]
 };
