@@ -56,7 +56,7 @@ Another problem with this test is that the first request usually takes a while m
 the result of jobs with smaller number of requests. I tested this by swapping around the order of synchronous and asynchronous jobs.
 This might be due to the initial DNS query. So we can just ignore the first `HTTPoison.get(url)`.
 
-With the above corrected, I managed to write a script to time how long the jobs compared to each other:  
+With the above problems corrected, I managed to write a script to time how long the jobs compared to each other:  
 `./tasks -u https://noncaching.url -m 60 -l 50`
 
 `-u`: url - provide a non-caching url which a reasonable pool size  
