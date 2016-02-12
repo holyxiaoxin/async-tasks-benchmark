@@ -17,3 +17,8 @@ Simple Benchmark script to test `Task.async` and `Task.await` in elixir.
 ### Exceptions
 - Depending on app server's pool size, results of `Task.async` might vary.
 - If the url doesn't return status code 200, the results might not be accurate. Therefore a tiny warning is thrown.
+
+<br>
+
+## TODO:
+Write a script to run a batch of scripts.
