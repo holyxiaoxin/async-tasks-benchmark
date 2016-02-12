@@ -25,7 +25,6 @@ defmodule Mix.Tasks.Benchmark do
       IO.write(f, CSVLixir.write_row([]))
       File.close(f)
     end)
-    # File.read!("test.csv") |> IO.inspect
   end
 
   defp parse_args(args) do
