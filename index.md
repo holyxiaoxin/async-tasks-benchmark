@@ -69,17 +69,22 @@ With the above corrected, I managed to write a script to time how long the jobs 
 
 <br>
 
-**Loop: 10**
+**Loop: 1**
 
 <canvas id="my-chart-1"></canvas>
 <div id="js-legend-1" class="chart-legend"></div>
 <br>
 
-**Loop: 50**
+**Loop: 10**
 
 <canvas id="my-chart-2"></canvas>
 <div id="js-legend-2" class="chart-legend"></div>
+<br>
 
+**Loop: 50**
+
+<canvas id="my-chart-3"></canvas>
+<div id="js-legend-3" class="chart-legend"></div>
 <br>
 
 I spun up the servers myself because I didn't want to be accused of DOSing someone's machine.

@@ -2,4 +2,4 @@ _site
 .sass-cache
 /_build
 /deps
-benchmark.result
+/benchmark_results
